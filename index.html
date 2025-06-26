@@ -13,23 +13,23 @@
     <p class="text-center text-gray-600 mb-6">Ajoute ton regret d'achat raté !</p>
     <form id="regretForm" class="space-y-4">
       <div>
-        <label for="marketCap" class="block text-sm font-medium text-gray-700">Market Cap au moment de l'hésitation ($)</label>
+        <label for="marketCap" class="block text-sm font-medium text-gray-700">Market Cap when I've hesitated ($)</label>
         <input type="number" id="marketCap" name="marketCap" required class="mt-1 p-2 border border-gray-300 rounded-md w-full">
       </div>
       <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
-        J'ai hésité
+        I've hesitated
       </button>
     </form>
 
     <div id="regretCount" class="mt-6 text-center text-sm text-gray-700"></div>
 
     <div class="mt-8">
-      <h2 class="text-xl font-semibold text-center mb-2">Historique des regrets (graphique)</h2>
+      <h2 class="text-xl font-semibold text-center mb-2">Regrets historic (graphique)</h2>
       <canvas id="regretChart" class="w-full"></canvas>
     </div>
 
     <div class="mt-8">
-      <h2 class="text-xl font-semibold text-center mb-2">Top 5 des pires regrets</h2>
+      <h2 class="text-xl font-semibold text-center mb-2">Top 5 biggest regrets </h2>
       <ul id="leaderboard" class="list-disc list-inside text-gray-700"></ul>
     </div>
   </div>
@@ -43,7 +43,7 @@
     const leaderboardEl = document.getElementById('leaderboard');
 
     const updateCount = () => {
-      regretCount.innerText = `${regrets.length} personnes ont hésité à acheter.`;
+      regretCount.innerText = `${regrets.length} people has hesitated to buy.`;
     };
 
     const updateLeaderboard = () => {
